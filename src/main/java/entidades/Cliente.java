@@ -42,6 +42,12 @@ public class Cliente {
     
     @Column(name = "apellido")
     private String apellido;
+    
+    @Column(name = "apodo")
+    private String apodo;
+    
+    @Column(name = "adeudo")
+    private Double adeudo;
 
     //@JsonManagedReference
     @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL)
@@ -92,6 +98,22 @@ public class Cliente {
         this.apellido = apellido;
     }
 
+    public String getApodo() {
+        return apodo;
+    }
+
+    public void setApodo(String apodo) {
+        this.apodo = apodo;
+    }
+
+    public Double getAdeudo() {
+        return adeudo;
+    }
+
+    public void setAdeudo(Double adeudo) {
+        this.adeudo = adeudo;
+    }
+    
     public List<Pedido> getPedidos() {
         return pedidos;
     }

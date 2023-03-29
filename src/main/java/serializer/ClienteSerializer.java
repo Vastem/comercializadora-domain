@@ -22,6 +22,8 @@ public class ClienteSerializer extends JsonSerializer<Cliente>{
         gen.writeNumberField("id", cliente.getId());
         gen.writeStringField("nombre", cliente.getNombre());
         gen.writeStringField("apellido", cliente.getApellido());
+        gen.writeStringField("apodo", cliente.getApodo());
+        gen.writeNumberField("adeudo", cliente.getAdeudo());
         
         // Agregar más campos aquí según sea necesario
         gen.writeEndObject();
