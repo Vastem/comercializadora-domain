@@ -56,6 +56,9 @@ public class Pedido {
     
     @Column(name = "observaciones")
     private String observaciones;
+    
+    @Column(name = "pagado")
+    private boolean pagado;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy="pedido")
     private List<PedidoProducto> pedidosProducto;
@@ -105,6 +108,14 @@ public class Pedido {
         return precioTotal;
     }
 
+    public boolean isPagado() {
+        return pagado;
+    }
+
+    public void setPagado(boolean pagado) {
+        this.pagado = pagado;
+    }
+    
     public void setPrecioTotal(double precioTotal) {
         this.precioTotal = precioTotal;
     }
