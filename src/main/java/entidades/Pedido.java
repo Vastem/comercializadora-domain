@@ -59,6 +59,9 @@ public class Pedido {
     
     @Column(name = "pagado")
     private boolean pagado;
+    
+    @Column(name = "saldo")
+    private double saldo;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy="pedido")
     private List<PedidoProducto> pedidosProducto;
@@ -167,6 +170,16 @@ public class Pedido {
     public void setLugarEntrega(String lugarEntrega) {
         this.lugarEntrega = lugarEntrega;
     }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+    
+    
     
 
     @Override
