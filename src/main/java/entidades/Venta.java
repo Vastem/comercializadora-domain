@@ -63,6 +63,10 @@ public class Venta {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public double getPrecioVenta() {
         return precioVenta;
     }
